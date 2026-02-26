@@ -9,11 +9,12 @@ const Header = () => {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-
   const navLinks = [
+    { label: "Systems & Solutions", path: "#" },
     { label: "Who We Are", path: "/who-we-are" },
-    { label: "What We Do", path: "/what-we-do" },
+    { label: "What We Do", path: "#" },
     { label: "Careers", path: "/careers" },
+    { label: "Contact Us", path: "#" },
   ];
 
   useEffect(() => {

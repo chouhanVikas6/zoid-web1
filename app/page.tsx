@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import ArticleCarousel from "../components/ArticleCarousel";
+import TextFlipper from "../components/TextFlipper";
 
 export default function Home() {
   return (
@@ -114,18 +115,19 @@ export default function Home() {
             loop
             muted
             playsInline
-            className="w-full h-full object-cover opacity-80"
-            src="https://cdn.northropgrumman.com/-/media/brand-team/new-homepage/careers-banner.mp4?rev=a19d14fe24b54eac98796190b11d6d51"
+            poster="/assets/soldierswithflag.png"
+            className="w-full h-full object-cover opacity-50"
+            src="/assets/soldierswithflag.webm"
           />
         </div>
 
         <div className="relative z-20 flex flex-col items-center justify-center h-full pt-16">
           <Link href="/careers" className="group flex flex-col items-center hover:opacity-90 transition-opacity">
             <h1 className="text-4xl md:text-6xl lg:text-[5rem] font-bold text-white text-center leading-[1.1] mb-1 md:mb-2 tracking-tight drop-shadow-lg">
-              Advancing defense
+              Build for
             </h1>
-            <h1 className="text-4xl md:text-6xl lg:text-[5rem] font-bold text-white text-center leading-[1.1] tracking-tight drop-shadow-lg">
-              and your career.
+            <h1 className="text-4xl md:text-6xl lg:text-[5rem] font-bold text-white text-center leading-[1.1] tracking-tight drop-shadow-lg h-[1.2em]">
+              <TextFlipper />
             </h1>
             <div className="mt-8 md:mt-12 bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-sm rounded-[2px] px-8 py-3.5 flex items-center justify-between gap-8 transition-all w-fit relative top-4 pointer-events-auto">
               <span className="text-[11px] font-medium uppercase tracking-[0.2em] text-white">Careers</span>
@@ -137,48 +139,10 @@ export default function Home() {
         </div>
 
         {/* Carousel subnav for careers */}
-        <div className="relative z-20 w-full bg-gradient-to-t from-black/80 via-black/40 to-transparent pt-24 pb-8 px-4 flex flex-col md:flex-row items-end justify-between">
-          <div className="w-24 hidden md:block" />
-          <div className="flex items-center justify-center gap-6 md:gap-10 overflow-x-auto w-full md:w-auto pb-4 md:pb-0 scrollbar-hide">
-            {["Early Career", "Professionals", "Veterans", "Search By Location", "Life at ZOID", "Current Employees"].map((cat) => (
-              <button key={cat} className="text-[10px] md:text-[11.5px] font-semibold uppercase text-white/50 hover:text-white transition-colors tracking-[0.2em] whitespace-nowrap">
-                {cat}
-              </button>
-            ))}
-          </div>
-          <div className="hidden md:flex flex-col items-center opacity-60 hover:opacity-100 transition-opacity cursor-pointer mb-2 mr-6">
-            <ChevronRight className="w-4 h-4 text-white rotate-90 -mb-2" />
-            <ChevronRight className="w-4 h-4 text-white rotate-90 mb-2" />
-            <span className="text-[9px] text-white uppercase tracking-[0.2em] font-medium mt-1">Scroll for More</span>
-          </div>
-        </div>
+
       </section>
 
-      {/* Secondary Careers Article Area */}
-      <section className="bg-black text-white w-full border-b border-gray-900">
-        <div className="relative h-[500px] md:h-[700px] w-full overflow-hidden group cursor-pointer max-w-[1600px] mx-auto">
-          <div className="absolute inset-0 bg-black">
-            <img
-              src="https://cdn.northropgrumman.com/-/media/Project/Northrop-Grumman/ngc/what-we-do/air/air/Interns-Hero-no-gradient-4.jpg?h=1000&w=2000"
-              className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-700"
-              alt="Interns"
-            />
-          </div>
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
 
-          <div className="relative z-10 w-full h-full px-4 xl:px-8 flex flex-col justify-end pb-8 md:pb-16 text-center md:text-left">
-            <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 md:mb-8 font-serif drop-shadow-md">Discover a mission with meaning.</h3>
-            <div>
-              <button className="inline-flex items-center gap-5 bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-sm px-6 py-4 transition-colors w-fit">
-                <span className="text-[11px] font-bold text-white uppercase tracking-[0.2em]">Learn More</span>
-                <svg width="15" height="23" viewBox="0 0 15 23" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-3 h-auto">
-                  <path d="M8.99388 11.6127L0.48224 20.1243L3.24954 22.8916L11.7612 14.38L14.3801 11.761L11.6129 8.99371L2.61914 0L0.00017293 2.61897L8.99388 11.6127Z" fill="white"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

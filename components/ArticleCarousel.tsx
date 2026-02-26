@@ -13,30 +13,42 @@ export default function ArticleCarousel() {
             id: 1,
             title: "Missile Decoys",
             category: "Missile Defense",
-            videoSrc: "https://cdn.northropgrumman.com/-/media/brand-team/new-homepage/fpa-thumbnails/boosting-production-fpa.mp4",
-            bgImg: "https://cdn.northropgrumman.com/-/media/Project/Northrop-Grumman/ngc/what-we-do/missile-defense/missile-defense-hero-1920x840.jpg",
+            videoSrc: "/assets/Missile-Decoys.webm",
+            bgImg: "/missile-decoys.png",
+            description: "We design advanced active missile decoy systems to protect naval and aerial assets from modern missile threats. Our decoys rapidly deploy away from the host platform, generates a false RF target, and seduces incoming missiles away from the ship or aircraft. Designed as the final soft-kill layer of defence, the system greatly enhances survivability. Enabled by our expertise in RF engineering, Digital Signal Processing, and Electronic Warfare, the solution delivers fast reaction, broadband coverage, and flexible deployment across multiple platforms.",
         },
         {
             id: 2,
-            title: "AI Airfield Safety",
-            category: "Mission Solutions",
-            videoSrc: "https://cdn.northropgrumman.com/-/media/Project/Northrop-Grumman/ngc/what-we-do/microelectronics/ME_BOP_FPA_WEB_HDR_16_7_FINAL_251028.mp4",
-            bgImg: "https://cdn.northropgrumman.com/-/media/Project/Northrop-Grumman/ngc/what-we-do/microelectronics/microelectronics-hero-1920x840.jpg",
+            title: "AI powered Air-Field Monitoring",
+            category: "AI and Autonomous Systems",
+            videoSrc: "/assets/Air-Field-Monitoring.webm",
+            bgImg: "/air-field-monitoring.png",
+            description: "We deploy advanced airfield security and aircraft monitoring systems purpose-built for defence applications. Our custom solutions include FOD detection systems capable of identifying objects as small as 3 mm, and autonomous aircraft monitoring systems that enable real-time coordination and post-mission or crash analysis. Engineered for high reliability and operational continuity, our systems enhance airbase safety, situational awareness, and command-level decision support in demanding aviation environments.",
         },
         {
             id: 3,
             title: "Unmanned Autonomous Systems",
             category: "Aircraft",
-            videoSrc: "https://cdn.northropgrumman.com/-/media/brand-team/new-homepage/fpa-thumbnails/talon-fpa.mp4",
-            bgImg: "https://cdn.northropgrumman.com/-/media/Project/Northrop-Grumman/ngc/what-we-do/air/air/project-talon-hero-1920x840.jpg",
+            videoSrc: "/assets/Unmanned-Autonomous-Systems.webm",
+            bgImg: "/Unmanned-Autonomous-Systems.png",
+            description: "We develop advanced unmanned autonomous solutions for defence, spanning multi-rotor UAVs, fixed-wing platforms, and transonic ballistic missile systems, each custom-designed for mission-specific requirements. Our expertise covers swarming autonomy, edge computing, AI-enabled aerial perception, kinetic strike capabilities, and GNSS-denied navigation and control. From low-level firmware customization to high-level multi-platform mission autonomy, we build AI-driven software that enables coordinated operations in complex and contested environments. Our solutions are engineered to deliver success and mission excellence in the most challenging environments.",
         },
         {
             id: 4,
-            title: "GNSS-Denied Navigation",
+            title: "GNSS Denied Navigation",
             category: "Mission Solutions",
-            videoSrc: "https://cdn.northropgrumman.com/-/media/Project/Northrop-Grumman/ngc/what-we-do/mission-solutions/fast-tracking-concept-combat-1920x840_V4.mp4",
-            bgImg: "https://cdn.northropgrumman.com/-/media/Project/Northrop-Grumman/ngc/what-we-do/mission-solutions/fast-tracking-concept-combat-hero-1920x840.jpg",
+            videoSrc: "/assets/GNSS.webm",
+            bgImg: "/GNSS.png",
+            description: "We develop Stable Positioning, Navigation & Timing systems for UAVs, Guided Munitions, Manned Aircrafts, & Armored Land Vehicles operating in contested GNSS Electronic Warfare environments. Our solutions are engineered to maintain stable navigation and control under active jamming and spoofing conditions. By integrating anti-jamming Controlled Reception Pattern Antennas (CRPA) with AI-powered Visual–Inertial Odometry (VIO), we deliver robust navigation performance. The architecture enables sustained mission continuity and precise guidance across modern operational corridors.",
         },
+        // {
+        //     id: 5,
+        //     title: "Electronic Warfare",
+        //     category: "Mission Solutions",
+        //     videoSrc: "https://cdn.northropgrumman.com/-/media/Project/Northrop-Grumman/ngc/what-we-do/mission-solutions/fast-tracking-concept-combat-1920x840_V4.mp4",
+        //     bgImg: "https://cdn.northropgrumman.com/-/media/Project/Northrop-Grumman/ngc/what-we-do/mission-solutions/fast-tracking-concept-combat-hero-1920x840.jpg",
+        //     description: "We develop Stable Positioning, Navigation & Timing systems for UAVs, Guided Munitions, Manned Aircrafts, & Armored Land Vehicles operating in contested GNSS Electronic Warfare environments. Our solutions are engineered to maintain stable navigation and control under active jamming and spoofing conditions. By integrating anti-jamming Controlled Reception Pattern Antennas (CRPA) with AI-powered Visual–Inertial Odometry (VIO), we deliver robust navigation performance. The architecture enables sustained mission continuity and precise guidance across modern operational corridors.",
+        // },
     ];
 
     // Handle Tab Click
@@ -103,7 +115,7 @@ export default function ArticleCarousel() {
                         <button
                             key={slide.id}
                             onClick={() => handleTabClick(slide.id)}
-                            className={`py-3.5 px-6 md:px-12 text-[10px] md:text-[11px] font-bold uppercase tracking-[0.15em] whitespace-nowrap text-center transition-all border rounded w-fit ${activeTab === slide.id ? 'bg-[#707070] text-white border-[#707070]' : 'bg-white text-black border-black/40 hover:border-black'}`}
+                            className={`py-3.5 px-6 md:px-12 text-[10px] md:text-[11px] font-bold uppercase tracking-[0.15em] whitespace-nowrap text-center transition-all border rounded w-fit ${activeTab === slide.id ? 'bg-black text-white border-black' : 'bg-white text-black border-black/40 hover:border-black'}`}
                         >
                             {slide.title}
                         </button>
@@ -153,17 +165,19 @@ export default function ArticleCarousel() {
 
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent" />
 
-                                <div className="absolute bottom-0 left-0 p-6 md:p-10 flex flex-col justify-end w-full whitespace-nowrap">
-                                    <p className="text-[10px] md:text-xs font-medium text-white/70 uppercase tracking-[0.3em] mb-3">{slide.category}</p>
-
-                                    <h3 className="text-3xl md:text-5xl lg:text-5xl font-bold text-white tracking-[0.15em] uppercase whitespace-normal leading-tight max-w-xl">
+                                <div className="absolute bottom-0 left-0 p-6 md:p-10 lg:p-16 flex flex-col justify-end w-full whitespace-normal">
+                                    <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-white tracking-[0.3em] uppercase leading-tight mb-4 md:mb-6">
                                         {slide.title}
                                     </h3>
 
-                                    <div className={`mt-6 md:mt-10 transition-opacity duration-300 ${isActive ? 'opacity-100' : 'opacity-0'}`}>
-                                        <button className="inline-flex items-center justify-between min-w-[200px] md:min-w-[250px] bg-white/20 hover:bg-white/30 border border-white/30 backdrop-blur-sm px-6 py-4 transition-colors rounded-sm group-hover:bg-white/30 text-left">
-                                            <span className="text-[10px] sm:text-[11px] font-bold text-white tracking-[0.2em]">{slide.title}</span>
-                                            <ChevronRight className="w-5 h-5 text-white" />
+                                    <p className="text-[10px] sm:text-xs md:text-[12px] text-white/90 font-medium leading-[1.8] md:leading-[2] max-w-[800px] mb-8 md:mb-12">
+                                        {slide.description}
+                                    </p>
+
+                                    <div className={`transition-opacity duration-300 ${isActive ? 'opacity-100' : 'opacity-0'}`}>
+                                        <button className="inline-flex items-center justify-between gap-6 bg-white/20 hover:bg-white/30 border border-white/30 backdrop-blur-md px-6 py-3 md:py-4 transition-colors rounded w-fit group-hover:bg-white/30 text-left">
+                                            <span className="text-[9px] sm:text-[10px] font-bold text-white tracking-[0.2em] uppercase">Find Out More</span>
+                                            <ChevronRight className="w-4 h-4 text-white" />
                                         </button>
                                     </div>
                                 </div>

@@ -91,7 +91,7 @@ const Careers = () => {
         <div className="relative z-10 max-w-[1600px] w-full mx-auto px-4 sm:px-8 xl:px-16">
           <div className="bg-black/60 backdrop-blur-sm max-w-xl p-8 md:p-12 lg:p-16 text-white w-full sm:w-[90%] md:w-[75%] lg:w-[60%]">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Careers at Northrop<br />Grumman
+              Careers at Zoid
             </h1>
             <p className="text-sm md:text-base leading-relaxed mb-10 text-white/90">
               Explore careers across air, cyber, land, sea, space and connectivity in between.

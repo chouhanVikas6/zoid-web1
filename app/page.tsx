@@ -22,11 +22,13 @@ export default function Home() {
         <div className="relative z-20 flex flex-col items-center justify-center h-full pt-16">
           <Link href="/who-we-are/the-facts" className="group flex flex-col items-center hover:opacity-90 transition-opacity">
             <h1
-              className="text-[3rem] sm:text-[5rem] md:text-[6.5rem] font-bold text-white uppercase text-center leading-[1.1] md:leading-[1.2] pl-[0.2em] tracking-[0.2em] sm:tracking-[0.4em]"
+              className="text-[3rem] xs:text-[1.5rem] sm:text-[2rem] md:text-[4rem] font-bold text-white uppercase text-center leading-[1.1] md:leading-[1.2] pl-[0.2em] tracking-[0.2em] sm:tracking-[0.4em]"
             >
-              Outpacing
+              TURNING DEEP-TECH
               <br />
-              Every
+              INTO
+              <br />
+              DEFENSE POWER
             </h1>
             <div className="mt-8 md:mt-12 bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-sm rounded-[2px] px-6 py-3 flex items-center justify-between gap-8 transition-all w-fit pointer-events-auto">
               <span className="text-[10px] sm:text-xs font-medium uppercase tracking-[0.2em] text-white">Accelerating Defense</span>

@@ -40,7 +40,7 @@ export default function Home() {
         </div>
 
         {/* Categories Jump Nav */}
-        <div className="relative z-20 w-full bg-gradient-to-t from-black/80 via-black/40 to-transparent pt-24 pb-8 px-4 flex flex-col md:flex-row items-end justify-between">
+        {/* <div className="relative z-20 w-full bg-gradient-to-t from-black/80 via-black/40 to-transparent pt-24 pb-8 px-4 flex flex-col md:flex-row items-end justify-between">
           <div className="w-24 hidden md:block" />
           <div className="flex items-center justify-center gap-6 md:gap-12 overflow-x-auto w-full md:w-auto pb-4 md:pb-0 scrollbar-hide">
             {["Advanced Weapons", "Aircraft", "Missile Defense", "Mission Solutions", "Space"].map((cat) => (
@@ -54,6 +54,28 @@ export default function Home() {
             <ChevronRight className="w-4 h-4 text-white rotate-90 mb-2" />
             <span className="text-[9px] text-white uppercase tracking-[0.2em] font-medium mt-1">Scroll for More</span>
           </div>
+        </div> */}
+
+        {/* Gradient transition to next section */}
+        <div className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-b from-transparent to-black z-10 pointer-events-none" />
+      </section>
+
+      {/* New Deep-Tech Solutions Section */}
+      <section className="bg-black text-white pt-16 md:pt-24 pb-20 md:pb-24 px-4 w-full z-20 relative">
+        <div className="max-w-[1400px] mx-auto px-4 md:px-8">
+          <h2 className="text-3xl sm:text-4xl md:text-[2.5rem] lg:text-[3rem] font-bold tracking-[0.05em] uppercase mb-10 md:mb-14 text-white">
+            We Design, Develop & Deploy Deep-Tech Solutions.
+          </h2>
+
+          <div className="text-sm md:text-base lg:text-[1.1rem] leading-[2] md:leading-[2.2] text-white/80 font-medium mb-16 md:mb-24 max-w-[1300px]">
+            We have domain expertise in Artificial Intelligence, Robotics-Unmanned Systems, and Electronic Warfare. We use our significant portfolio of IPs to design solutions for the Global Defence and Aerospace Industry. &nbsp;&nbsp; We work shoulder-to-shoulder with the end-user and military personnel to deliver systems that are shaped by real-world missions and insight learned from modern conflicts. This connection with the Concept of Operations drives our R&D process, allowing us to think beyond theoretical requirements and deliver mission success.
+          </div>
+
+          <div className="w-full flex justify-end">
+            <Link href="#" className="text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-white hover:text-gray-300 transition-colors">
+              Find Out More
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -61,12 +83,12 @@ export default function Home() {
       <section className="bg-white text-black pt-20 pb-12 px-4 shadow-sm border-t border-gray-200">
         <div className="max-w-[1600px] mx-auto px-4 md:px-8">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[4rem] font-bold tracking-[0.2em] uppercase text-black mb-6">
-            Accelerating The Industry.
+            Discover Our Domains.
           </h2>
 
-          <div className="w-full border-t border-black/30 mb-6" />
+          <div className="w-full border-t border-black/30" />
 
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+          {/* <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
             <Link href="/who-we-are" className="text-[10px] md:text-[11px] font-bold text-black uppercase tracking-[0.25em] hover:text-black/70 transition-colors">
               Who We Are
             </Link>
@@ -77,7 +99,7 @@ export default function Home() {
                 </Link>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 

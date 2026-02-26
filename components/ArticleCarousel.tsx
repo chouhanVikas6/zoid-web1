@@ -11,28 +11,28 @@ export default function ArticleCarousel() {
     const slides = [
         {
             id: 1,
-            title: "Boosting Production",
+            title: "Missile Decoys",
             category: "Missile Defense",
             videoSrc: "https://cdn.northropgrumman.com/-/media/brand-team/new-homepage/fpa-thumbnails/boosting-production-fpa.mp4",
             bgImg: "https://cdn.northropgrumman.com/-/media/Project/Northrop-Grumman/ngc/what-we-do/missile-defense/missile-defense-hero-1920x840.jpg",
         },
         {
             id: 2,
-            title: "Microscopic Giants",
+            title: "AI Airfield Safety",
             category: "Mission Solutions",
             videoSrc: "https://cdn.northropgrumman.com/-/media/Project/Northrop-Grumman/ngc/what-we-do/microelectronics/ME_BOP_FPA_WEB_HDR_16_7_FINAL_251028.mp4",
             bgImg: "https://cdn.northropgrumman.com/-/media/Project/Northrop-Grumman/ngc/what-we-do/microelectronics/microelectronics-hero-1920x840.jpg",
         },
         {
             id: 3,
-            title: "Project Talon",
+            title: "Unmanned Autonomous Systems",
             category: "Aircraft",
             videoSrc: "https://cdn.northropgrumman.com/-/media/brand-team/new-homepage/fpa-thumbnails/talon-fpa.mp4",
             bgImg: "https://cdn.northropgrumman.com/-/media/Project/Northrop-Grumman/ngc/what-we-do/air/air/project-talon-hero-1920x840.jpg",
         },
         {
             id: 4,
-            title: "Fast Tracking Concept to Combat",
+            title: "GNSS-Denied Navigation",
             category: "Mission Solutions",
             videoSrc: "https://cdn.northropgrumman.com/-/media/Project/Northrop-Grumman/ngc/what-we-do/mission-solutions/fast-tracking-concept-combat-1920x840_V4.mp4",
             bgImg: "https://cdn.northropgrumman.com/-/media/Project/Northrop-Grumman/ngc/what-we-do/mission-solutions/fast-tracking-concept-combat-hero-1920x840.jpg",

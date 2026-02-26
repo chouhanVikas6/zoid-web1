@@ -29,7 +29,7 @@ const Header = () => {
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-[72px]">
           <Link href="/" className="flex items-center gap-2 group">
-            <span className="text-white font-bold text-2xl tracking-wide uppercase">
+            <span className="text-white font-bold text-3xl tracking-wide uppercase">
               ZOID
             </span>
           </Link>
@@ -40,7 +40,7 @@ const Header = () => {
               <Link
                 key={link.label}
                 href={link.path}
-                className="text-[14px] text-white hover:text-white/70 transition-colors whitespace-nowrap"
+                className="text-lg text-white hover:text-white/70 transition-colors whitespace-nowrap"
               >
                 {link.label}
               </Link>

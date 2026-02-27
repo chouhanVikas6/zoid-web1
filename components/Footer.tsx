@@ -1,86 +1,107 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
+import { LuMail } from "react-icons/lu";
+import { LuSmartphone } from "react-icons/lu";
+import { LuLinkedin } from "react-icons/lu";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-black text-white pt-24 pb-16 px-6 md:px-12 font-sans border-t border-white/10">
-      <div className="max-w-[1400px] mx-auto">
+    <footer className="relative w-full bg-[#050505] text-white pt-16 pb-8 px-6 md:px-12 xl:px-24 font-sans overflow-hidden border-t border-white/10 min-h-[600px] flex flex-col justify-between">
+      {/* Background SVG Overlay */}
+      <div className="absolute inset-0 z-0 opacity-70 pointer-events-none min-w-[1400px]">
+        <img
+          src="/jetsketch.svg"
+          alt="Jet Sketch Background"
+          className="w-full h-full object-cover object-center opacity-80"
+        />
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-y-24 md:gap-y-32 gap-x-8">
+      <div className="relative z-10 max-w-[1600px] mx-auto w-full h-full flex flex-col justify-between flex-grow">
 
-          {/* Top Left: Logo */}
-          <div className="md:col-span-5 lg:col-span-5">
-            <Link href="/" className="inline-block hover:opacity-80 transition-opacity">
-              <h2 className="text-5xl md:text-7xl font-serif font-medium tracking-widest mb-1">ZOID</h2>
-              <p className="text-lg md:text-[22px] font-serif tracking-[0.15em] text-white/90 uppercase mb-8">Technologies</p>
-            </Link>
-
-            <div className="text-[12px] md:text-[13px] font-sans tracking-[0.15em] text-white/70 leading-[2] uppercase max-w-[420px]">
-              <p>ADDRESS :1ST FLOOR, D-167, BLOCK D,</p>
-              <p>VIVEK VIHAR PHASE 1, BLOCK D, VIVEK</p>
-              <p>VIHAR PHASE 1, NEW DELHI, SHAHDARA,</p>
-              <p>DELHI, 110095</p>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4 mb-20 md:mb-32 w-full pt-8 lg:pt-12">
+          {/* Column 1 */}
+          <div className="flex flex-col h-full">
+            <div className="mb-12 md:mb-24">
+              <h4 className="text-white font-medium text-xl mb-3 md:mb-5 tracking-wide">Registered Office</h4>
+              <div className="text-white/80 text-xl md:text-xs leading-relaxed max-w-[240px]">
+                D-167, Block-D, Vivek Vihar, Phase-1,<br />
+                East Delhi, Delhi, 110095, India
+              </div>
             </div>
-
-            <div className="flex flex-col gap-1 pt-12 md:pt-24">
-              <span className="text-[10px] sm:text-[11px] font-bold text-white uppercase tracking-[0.05em] mb-4">
-                COPYRIGHT © 2026 ZOID TECHNOLOGIES
-              </span>
+            <div className="bottom-[-10px] mb-12 lg:mb-16 absolute">
+              <h1 className="text-[5rem] sm:text-[7rem] md:text-[9rem] lg:text-[11.5rem] leading-[0.85] font-serif text-white mb-2">
+                ZOID
+              </h1>
+              <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-[44px] font-serif text-white tracking-widest pl-1 lg:pl-3">
+                TECHNOLOGIES
+              </h2>
             </div>
           </div>
 
-          {/* Top Right: Link Categories */}
-          <div className="md:col-span-7 lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-10 sm:gap-4 md:pr-12">
-
-            {/* Column 1: COMPANY */}
-            <div className="flex flex-col gap-4">
-              <span className="text-[11px] font-bold text-white font-sans uppercase tracking-[0.05em] mb-1">
-                COMPANY
-              </span>
-              <Link href="#" className="text-[14px] font-sans font-normal text-white/70 hover:text-white transition-colors tracking-wide">Mission</Link>
-              <Link href="#" className="text-[14px] font-sans font-normal text-white/70 hover:text-white transition-colors tracking-wide">NewsRoom</Link>
-              <Link href="#" className="text-[14px] font-sans font-normal text-white/70 hover:text-white transition-colors tracking-wide">Leadership</Link>
-              <Link href="#" className="text-[14px] font-sans font-normal text-white/70 hover:text-white transition-colors tracking-wide">Gear Store</Link>
-
-              <div className="pt-2 flex flex-col gap-4">
-                <Link href="#" className="text-[14px] font-sans font-normal text-white/70 hover:text-white transition-colors tracking-wide">Privacy Policy</Link>
-                <Link href="#" className="text-[14px] font-sans font-normal text-white/70 hover:text-white transition-colors tracking-wide">Terms of Use</Link>
+          {/* Column 2 */}
+          <div className="flex flex-col h-full">
+            <div className="mb-12 md:mb-0">
+              <h4 className="text-white font-medium text-xl mb-3 md:mb-5 tracking-wide">Corporate Office</h4>
+              <div className="text-white/80 text-xl md:text-xs leading-relaxed max-w-[240px]">
+                First Floor, B-13A, Block-B, Sector 132,<br />
+                Noida, UP-201304, India
               </div>
             </div>
-
-            {/* Column 2: WORK WITH US */}
-            <div className="flex flex-col gap-4">
-              <span className="text-[11px] font-bold text-white font-sans uppercase tracking-[0.05em] mb-1">
-                WORK WITH US
-              </span>
-              <Link href="/careers" className="text-[14px] font-sans font-normal text-white/70 hover:text-white transition-colors tracking-wide">Careers</Link>
-              <Link href="#" className="text-[14px] font-sans font-normal text-white/70 hover:text-white transition-colors tracking-wide">The Forge Program</Link>
-              <Link href="#" className="text-[14px] font-sans font-normal text-white/70 hover:text-white transition-colors tracking-wide">SkillBridge</Link>
-              <Link href="#" className="text-[14px] font-sans font-normal text-white/70 hover:text-white transition-colors tracking-wide">Open Roles</Link>
+            <div className="flex flex-col gap-6 md:mt-24">
+              <Link href="/" className="text-white/70 text-xl md:text-xs hover:text-white transition-colors">Home</Link>
+              <Link href="/who-we-are" className="text-white/70 text-xl md:text-xs hover:text-white transition-colors">Who we are</Link>
+              <Link href="#" className="text-white/70 text-xl md:text-xs hover:text-white transition-colors">Contact Us</Link>
             </div>
-
-            {/* Column 3: SOCIAL */}
-            <div className="flex flex-col gap-4">
-              <span className="text-[11px] font-bold text-white font-sans uppercase tracking-[0.05em] mb-1">
-                SOCIAL & CONTACT
-              </span>
-              <a href="#" className="text-[14px] font-sans font-normal text-white/70 hover:text-white transition-colors tracking-wide">LinkedIn</a>
-
-              <div className="flex flex-col gap-1 mt-6 font-sans">
-                <a href="tel:+919871617142" className="text-[14px] font-normal text-white/70 hover:text-white transition-colors tracking-wide">
-                  +91 9871617142
-                </a>
-                <a href="mailto:sales@zoidtech.co.in" className="text-[14px] font-normal text-white/70 hover:text-white transition-colors tracking-wide">
-                  sales@zoidtech.co.in
-                </a>
-              </div>
-            </div>
-
           </div>
 
+          {/* Column 3 */}
+          <div className="flex flex-col h-full">
+            <div className="mb-12 md:mb-0">
+              <h4 className="text-white font-medium text-xl mb-3 md:mb-5 tracking-wide">Contact</h4>
+              <div className="flex items-center gap-2 text-white/80 text-xl md:text-xs leading-relaxed">
+                <LuSmartphone /> <a href="tel:+919871617142">+91 9871617142</a>
+              </div>
+              <div className="flex items-center gap-2 text-white/80 text-xl md:text-xs leading-relaxed">
+                <LuMail /> <a href="mailto:sales@zoidtech.co.in">sales@zoidtech.co.in</a>
+              </div>
+            </div>
+            <div className="flex flex-col gap-6 mt-6 md:mt-24">
+              <Link href="#" className="text-white/70 text-xl md:text-xs hover:text-white transition-colors">Systems</Link>
+              <Link href="/what-we-do" className="text-white/70 text-xl md:text-xs hover:text-white transition-colors">What we do</Link>
+            </div>
+          </div>
+
+          {/* Column 4 */}
+          <div className="flex flex-col h-full ">
+            <div className="mb-12 md:mb-0">
+              <h4 className="text-white font-medium text-xl mb-3 md:mb-5 tracking-wide">Follow Us</h4>
+              <Link href="https://www.linkedin.com/company/zoid/" className="flex items-center gap-2 text-white/80 text-xl md:text-xs hover:text-white transition-colors">
+                <LuLinkedin /> LinkedIn
+              </Link>
+            </div>
+            <div className="flex flex-col gap-6 mt-6 md:mt-24">
+              <Link href="#" className="text-white/70 text-xl md:text-xs hover:text-white transition-colors">Solutions</Link>
+              <Link href="/careers" className="text-white/70 text-xl md:text-xs hover:text-white transition-colors">Careers</Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Section: Logo and Copyright */}
+        <div className="flex flex-col pb-4 mt-auto xl:mt-32 relative">
 
 
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 md:gap-8 w-full pt-6">
+            <div className="text-[9px] md:text-[10px] text-white/70 tracking-[0.05em] font-sans">
+              ZOID TECHNOLOGIES PRIVATE LIMITED | 2026 All Rights Reserved
+            </div>
+
+            <div className="flex gap-8 text-[9px] md:text-[10px] text-white/70 tracking-[0.05em] font-sans">
+              <Link href="#" className="hover:text-white transition-colors">Terms of Use</Link>
+              <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
+            </div>
+          </div>
         </div>
 
       </div>

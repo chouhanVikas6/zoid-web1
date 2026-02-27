@@ -112,53 +112,61 @@ const WhatWeDo = () => {
       {/* Alternating Sections */}
       <div className="bg-black text-white pb-24">
         {sections.map((section, idx) => (
-          <section key={section.id} id={section.id} className="py-16 md:py-20 lg:py-24">
-            <div className={`max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center`}>
+          <section key={section.id} id={section.id} className="w-full">
+            <div className={`grid grid-cols-1 lg:grid-cols-2 items-center`}>
               {idx % 2 === 0 ? (
                 <>
-                  <img
-                    src={section.image}
-                    alt={section.imageAlt}
-                    className="w-full h-auto aspect-[1.5] lg:aspect-[1.6] object-cover"
-                    loading="lazy"
-                  />
-                  <div className="lg:pl-6 xl:pl-8">
-                    <h2 className="text-3xl md:text-4xl lg:text-[42px] font-bold mb-6">
-                      {section.title}
-                    </h2>
-                    <p className="text-white/90 mb-8 leading-relaxed md:text-[17px]">
-                      {section.description}
-                    </p>
-                    <Link
-                      href="#"
-                      className="inline-block bg-[#0033a0] text-white px-6 py-3 text-[15px] font-medium hover:bg-[#002277] transition-colors"
-                    >
-                      {section.buttonText}
-                    </Link>
+                  <div className="w-full h-full">
+                    <img
+                      src={section.image}
+                      alt={section.imageAlt}
+                      className="w-full h-full lg:aspect-auto object-cover min-h-[300px] lg:min-h-[500px]"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="px-8 py-12 lg:py-24 lg:px-16 xl:px-24 2xl:px-32 flex flex-col justify-center h-full">
+                    <div className="max-w-xl">
+                      <h2 className="text-3xl md:text-4xl lg:text-[42px] font-bold mb-6 tracking-wide">
+                        {section.title}
+                      </h2>
+                      <p className="text-white/90 mb-8 leading-relaxed md:text-[17px] font-light">
+                        {section.description}
+                      </p>
+                      <Link
+                        href="#"
+                        className="inline-block bg-[#0033a0] text-white px-8 py-3.5 text-[15px] font-medium hover:bg-[#002277] transition-colors"
+                      >
+                        {section.buttonText}
+                      </Link>
+                    </div>
                   </div>
                 </>
               ) : (
                 <>
-                  <div className="lg:pr-6 xl:pr-8 order-2 lg:order-1">
-                    <h2 className="text-3xl md:text-4xl lg:text-[42px] font-bold mb-6">
-                      {section.title}
-                    </h2>
-                    <p className="text-white/90 mb-8 leading-relaxed md:text-[17px]">
-                      {section.description}
-                    </p>
-                    <Link
-                      href="#"
-                      className="inline-block bg-[#0033a0] text-white px-6 py-3 text-[15px] font-medium hover:bg-[#002277] transition-colors"
-                    >
-                      {section.buttonText}
-                    </Link>
+                  <div className="px-8 py-12 lg:py-24 lg:px-16 xl:px-24 2xl:px-32 flex flex-col justify-center h-full order-2 lg:order-1 items-start lg:items-end text-left lg:text-left">
+                    <div className="max-w-xl">
+                      <h2 className="text-3xl md:text-4xl lg:text-[42px] font-bold mb-6 tracking-wide">
+                        {section.title}
+                      </h2>
+                      <p className="text-white/90 mb-8 leading-relaxed md:text-[17px] font-light">
+                        {section.description}
+                      </p>
+                      <Link
+                        href="#"
+                        className="inline-block bg-[#0033a0] text-white px-8 py-3.5 text-[15px] font-medium hover:bg-[#002277] transition-colors"
+                      >
+                        {section.buttonText}
+                      </Link>
+                    </div>
                   </div>
-                  <img
-                    src={section.image}
-                    alt={section.imageAlt}
-                    className="w-full h-auto aspect-[1.5] lg:aspect-[1.6] object-cover order-1 lg:order-2"
-                    loading="lazy"
-                  />
+                  <div className="w-full h-full order-1 lg:order-2">
+                    <img
+                      src={section.image}
+                      alt={section.imageAlt}
+                      className="w-full h-full lg:aspect-auto object-cover min-h-[300px] lg:min-h-[500px]"
+                      loading="lazy"
+                    />
+                  </div>
                 </>
               )}
             </div>

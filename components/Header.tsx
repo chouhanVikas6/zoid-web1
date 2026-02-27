@@ -30,6 +30,7 @@ const Header = () => {
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-[72px]">
           <Link href="/" className="flex items-center gap-2 group">
+            <img src="/zoid-logo.png" alt="Zoid Logo" className="h-8 md:h-10 w-auto object-contain" />
             <span className="text-white font-bold text-3xl tracking-wide uppercase">
               ZOID
             </span>

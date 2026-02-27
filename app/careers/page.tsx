@@ -60,21 +60,6 @@ const benefits = [
 const Careers = () => {
   return (
     <div>
-      {/* Secondary Nav Bar */}
-      <div className="bg-black pt-[68px] pb-4 border-t border-white/20">
-        <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm">
-          <h2 className="text-white font-bold tracking-wide mb-4 md:mb-0">
-            Careers at ZOID
-          </h2>
-          <div className="flex flex-wrap gap-4 md:gap-6 justify-center">
-            {["Search Jobs", "Internal Job Opportunities", "Events", "Recruitment Fraud"].map((link) => (
-              <a key={link} href="#" className="text-white text-xs hover:text-white/80 transition-colors whitespace-nowrap">
-                {link}
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
 
       {/* Hero */}
       <section className="relative w-full h-[60vh] min-h-[500px] flex items-center overflow-hidden">

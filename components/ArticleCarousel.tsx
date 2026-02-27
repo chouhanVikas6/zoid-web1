@@ -115,7 +115,7 @@ export default function ArticleCarousel() {
                         <button
                             key={slide.id}
                             onClick={() => handleTabClick(slide.id)}
-                            className={`py-3.5 px-6 md:px-12 text-[10px] md:text-[11px] font-bold uppercase tracking-[0.15em] whitespace-nowrap text-center transition-all border rounded w-fit ${activeTab === slide.id ? 'bg-black text-white border-black' : 'bg-white text-black border-black/40 hover:border-black'}`}
+                            className={`py-3.5 px-6 md:px-12 text-[10px] md:text-[11px] font-bold uppercase tracking-[0.15em] whitespace-nowrap text-center transition-all border rounded w-fit ${activeTab === slide.id ? 'bg-black text-white border-black' : 'bg-white text-black border-black/40 hover:border-black hover:bg-black/5 hover:text-black'}`}
                         >
                             {slide.title}
                         </button>
@@ -147,7 +147,7 @@ export default function ArticleCarousel() {
                                 key={slide.id}
                                 ref={(el) => { cardRefs.current[idx] = el; }}
                                 // Cards maintain original size, matching large width seen in screenshots
-                                className={`snap-start shrink-0 w-[90vw] md:w-[85vw] lg:w-[1300px] h-full relative group overflow-hidden rounded-xl bg-zinc-900 border border-zinc-500 cursor-pointer transition-opacity duration-300 ${!isActive ? 'opacity-80 hover:opacity-100' : 'opacity-100'}`}
+                                className={`snap-start shrink-0 w-[90vw] md:w-[85vw] lg:w-[1300px] h-full relative group overflow-hidden rounded-xl bg-zinc-900 border border-zinc-500 cursor-pointer transition-opacity duration-300 ${!isActive ? 'opacity-80 hover:opacity-100' : 'opacity-90 opacity-100'}`}
                                 onClick={() => handleTabClick(slide.id)}
                             >
                                 {isActive ? (
@@ -156,26 +156,30 @@ export default function ArticleCarousel() {
                                         loop
                                         muted
                                         playsInline
-                                        className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-700"
+                                        className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-700"
                                         src={slide.videoSrc}
                                     />
                                 ) : (
                                     <img src={slide.bgImg} alt={slide.title} className="absolute inset-0 w-full h-full object-cover opacity-50 block sm:hidden md:block" /> // Using fallback image for inactive
                                 )}
 
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
 
-                                <div className="absolute bottom-0 left-0 p-6 md:p-10 lg:p-16 flex flex-col justify-end w-full whitespace-normal">
-                                    <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-white tracking-[0.3em] uppercase leading-tight mb-4 md:mb-6">
+                                <div className="absolute bottom-0 left-0 p-6 md:p-10 lg:p-16 flex flex-col justify-end w-full whitespace-normal z-20">
+                                    <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] text-shadow-lg font-bold text-white tracking-[0.3em] uppercase leading-tight mb-4 md:mb-6 transition-transform duration-500">
                                         {slide.title}
                                     </h3>
 
-                                    <p className="text-[10px] sm:text-xs md:text-[12px] text-white/90 font-medium leading-[1.8] md:leading-[2] max-w-[800px] mb-8 md:mb-12">
-                                        {slide.description}
-                                    </p>
+                                    <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out w-full">
+                                        <div className="overflow-hidden">
+                                            <p className="text-[10px] sm:text-sm md:text-[14px] text-white/90 text-shadow-lg font-medium leading-[1.8] md:leading-[2] max-w-[800px] pb-8 md:pb-12 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-8 group-hover:translate-y-0">
+                                                {slide.description}
+                                            </p>
+                                        </div>
+                                    </div>
 
                                     <div className={`transition-opacity duration-300 ${isActive ? 'opacity-100' : 'opacity-0'}`}>
-                                        <button className="inline-flex items-center justify-between gap-6 bg-white/20 hover:bg-white/30 border border-white/30 backdrop-blur-md px-6 py-3 md:py-4 transition-colors rounded w-fit group-hover:bg-white/30 text-left">
+                                        <button className="inline-flex items-center justify-between gap-6 bg-white/20 hover:bg-white/30 border border-white/30 backdrop-blur-md px-6 py-2 md:py-3 transition-colors rounded w-fit group-hover:bg-white/30 text-left">
                                             <span className="text-[9px] sm:text-[10px] font-bold text-white tracking-[0.2em] uppercase">Find Out More</span>
                                             <ChevronRight className="w-4 h-4 text-white" />
                                         </button>

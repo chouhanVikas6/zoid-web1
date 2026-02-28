@@ -30,13 +30,8 @@ const Footer = () => {
                 East Delhi, Delhi, 110095, India
               </div>
             </div>
-            <div className="bottom-[-10px] mb-12 lg:mb-16 absolute">
-              <h1 className="text-[5rem] sm:text-[7rem] md:text-[9rem] lg:text-[11.5rem] leading-[0.85] font-serif text-white mb-2">
-                ZOID
-              </h1>
-              <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-[44px] font-serif text-white tracking-widest pl-1 lg:pl-3">
-                TECHNOLOGIES
-              </h2>
+            <div className="bottom-[10px] md:bottom-[-10px] left-[-15px] md:left-[-45px] mb-12 lg:mb-16 absolute">
+              <img src="/Zoid-logo-footer.svg" alt="Zoid Technologies" className="h-[6rem] sm:h-[8rem] md:h-[10rem] lg:h-[16rem] w-auto" />
             </div>
           </div>
 
@@ -52,7 +47,7 @@ const Footer = () => {
             <div className="flex flex-col gap-6 md:mt-24">
               <Link href="/" className="text-white/70 text-xl md:text-xs hover:text-white transition-colors">Home</Link>
               <Link href="/who-we-are" className="text-white/70 text-xl md:text-xs hover:text-white transition-colors">Who we are</Link>
-              <Link href="#" className="text-white/70 text-xl md:text-xs hover:text-white transition-colors">Contact Us</Link>
+              <Link href="/who-we-are" className="text-white/70 text-xl md:text-xs hover:text-white transition-colors">Contact Us</Link>
             </div>
           </div>
 
@@ -68,8 +63,8 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex flex-col gap-6 mt-6 md:mt-24">
-              <Link href="#" className="text-white/70 text-xl md:text-xs hover:text-white transition-colors">Systems</Link>
-              <Link href="/what-we-do" className="text-white/70 text-xl md:text-xs hover:text-white transition-colors">What we do</Link>
+              <Link href="/who-we-are" className="text-white/70 text-xl md:text-xs hover:text-white transition-colors">Systems</Link>
+              <Link href="/who-we-are" className="text-white/70 text-xl md:text-xs hover:text-white transition-colors">What we do</Link>
             </div>
           </div>
 
@@ -82,8 +77,8 @@ const Footer = () => {
               </Link>
             </div>
             <div className="flex flex-col gap-6 mt-6 md:mt-24">
-              <Link href="#" className="text-white/70 text-xl md:text-xs hover:text-white transition-colors">Solutions</Link>
-              <Link href="/careers" className="text-white/70 text-xl md:text-xs hover:text-white transition-colors">Careers</Link>
+              <Link href="/who-we-are" className="text-white/70 text-xl md:text-xs hover:text-white transition-colors">Solutions</Link>
+              <Link href="https://www.linkedin.com/company/zoid/" className="text-white/70 text-xl md:text-xs hover:text-white transition-colors">Careers</Link>
             </div>
           </div>
         </div>

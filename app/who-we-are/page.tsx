@@ -66,10 +66,10 @@ const WhoWeAre = () => {
       {/* Intro Section */}
       <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 relative">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             We are a Deep-Tech Defense Technology Startup.
           </h2>
-          <p className="text-muted-foreground max-w-3xl mx-auto mb-8 text-lg leading-relaxed text-left">
+          <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
             We Design, Develop, & Deploy Deep-Tech solutions for military applications; with domain expertise in Electronic Warfare and AI-Enabled Software Solutions for unmanned systems.  We have a practical understanding of the technologies used in modern conflicts and hence, our solutions meet not only the end-user’s SQRs but also their operational needs. By integrating best-in-class technologies from our global network into our sovereign systems architecture, we solve complex battlefield problems and deliver solutions that operators can trust.
           </p>
         </div>
@@ -100,7 +100,7 @@ const WhoWeAre = () => {
 
         {/* Listen First Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 md:min-h-[350px] lg:min-h-[400px] max-w-7xl mx-auto px-4">
-          <div className="px-6 py-1 lg:py-2 lg:px-8 xl:px-12 2xl:px-16 flex flex-col justify-center bg-[#020202] order-2 md:order-1 items-start lg:items-end text-left lg:text-left h-full">
+          <div className="pr-6 py-1 lg:py-2 lg:pr-8 xl:pr-12 2xl:pr-16 flex flex-col justify-center bg-[#020202] order-2 md:order-1 items-start lg:items-end text-left lg:text-left h-full">
             <div className="max-w-xl">
               <h2 className="text-3xl md:text-4xl lg:text-[42px] font-bold mb-6 tracking-wide">We listen first</h2>
               <p className="text-white/90 mb-8 leading-relaxed md:text-[17px] font-light">
@@ -138,7 +138,7 @@ const WhoWeAre = () => {
 
         {/* Deliver Success Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 md:min-h-[350px] lg:min-h-[400px] max-w-7xl mx-auto px-4">
-          <div className="px-6 py-1 lg:py-2 lg:px-8 xl:px-12 2xl:px-16 flex flex-col justify-center bg-[#020202] order-2 md:order-1 items-start lg:items-end text-left lg:text-left h-full">
+          <div className="pr-6 py-1 lg:py-2 lg:pr-8 xl:pr-12 2xl:pr-16 flex flex-col justify-center bg-[#020202] order-2 md:order-1 items-start lg:items-end text-left lg:text-left h-full">
             <div className="max-w-xl">
               <h2 className="text-3xl md:text-4xl lg:text-[42px] font-bold mb-6 tracking-wide">We Deliver Success</h2>
               <p className="text-white/90 mb-8 leading-relaxed md:text-[17px] font-light">
@@ -165,33 +165,32 @@ const WhoWeAre = () => {
               Our Leadership
             </h2>
           </div>
-          <div className="max-w-7xl mx-auto px-4 w-full">
+          <div className="max-w-7xl mx-auto px-4 w-full pb-20">
             <div className="grid grid-cols-3 gap-6 lg:gap-8">
               {leaders.map((key) => (
-                <div key={key.name} className="w-full bg-[#d1d5db]">
-                  <img src={key.image} alt={key.name} className="w-full aspect-[4/5] object-cover object-top" />
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="w-full relative bg-black min-h-[800px] mt-0">
-            <video autoPlay loop muted playsInline src="/assets/earth.mp4" className="absolute inset-0 w-full h-full object-cover object-center" />
-            <div className="relative z-10 w-full max-w-7xl mx-auto px-4">
-              <div className="grid grid-cols-3 gap-6 lg:gap-8">
-                {leaders.map((key) => (
-                  <div key={key.name} className="bg-white p-6 md:p-8 border-x border-b border-gray-200">
+                <div key={key.name} className="w-full bg-white rounded-md border border-gray-200 shadow-[0_2px_12px_rgba(0,0,0,0.08)] overflow-hidden">
+                  <div className="bg-[#d1d5db] mx-4 mt-4 rounded-sm overflow-hidden">
+                    <img src={key.image} alt={key.name} className="w-full aspect-[4/5] object-cover object-top" />
+                  </div>
+                  <div className="p-6 md:p-8 border-t border-gray-100 mt-4">
                     <h3 className="text-xl font-bold text-black mb-1">{key.name}</h3>
                     <p className="text-sm font-medium text-gray-500">{key.role}</p>
                     <p className="mt-4 text-[14px] text-black/80 leading-relaxed font-sans">{key.desc}</p>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
 
-              <div className="mt-20 md:mt-28 max-w-2xl text-white pb-32 ml-auto text-right">
-                <p className="text-[28px] md:text-[32px] xl:text-[36px] leading-tight font-light font-sans tracking-wide">
-                  Empowering the Defense and Aerospace industry with home-grown <strong className="font-bold text-white">Deep-Tech solutions</strong> that ensure <strong className="font-bold text-white">mission outcomes</strong> across every domain <strong className="font-bold text-white">of modern warfare.</strong>
-                </p>
-              </div>
+        {/* Earth Video Section - Desktop */}
+        <div className="hidden md:block w-full relative bg-black h-[95vh]">
+          <video autoPlay loop muted playsInline src="/assets/earth.mp4" className="absolute inset-0 w-full h-full object-cover object-center" />
+          <div className="relative z-10 w-full h-full flex items-center justify-end">
+            <div className="max-w-2xl text-white pr-8 lg:pr-16 xl:pr-24 text-right">
+              <p className="text-[28px] md:text-[32px] xl:text-[36px] leading-tight font-light font-sans tracking-wide">
+                Empowering the Defense and Aerospace industry with home-grown <strong className="font-bold text-white">Deep-Tech solutions</strong> that ensure <strong className="font-bold text-white">mission outcomes</strong> across every domain <strong className="font-bold text-white">of modern warfare.</strong>
+              </p>
             </div>
           </div>
         </div>
@@ -204,11 +203,11 @@ const WhoWeAre = () => {
             </h2>
             <div className="grid grid-cols-1 gap-8">
               {leaders.map((key) => (
-                <div key={key.name} className="w-full shadow-lg">
-                  <div className="bg-[#d1d5db] aspect-[4/5]">
+                <div key={key.name} className="w-full bg-white rounded-md border border-gray-200 shadow-[0_2px_12px_rgba(0,0,0,0.08)] overflow-hidden">
+                  <div className="bg-[#d1d5db] mx-4 mt-4 rounded-sm overflow-hidden aspect-[4/5]">
                     <img src={key.image} alt={key.name} className="w-full h-full object-cover object-top" />
                   </div>
-                  <div className="bg-white p-6 border border-gray-200 border-t-0">
+                  <div className="p-6 border-t border-gray-100 mt-4">
                     <h3 className="text-xl font-bold text-black mb-1">{key.name}</h3>
                     <p className="text-sm font-medium text-gray-500">{key.role}</p>
                     <p className="mt-4 text-[14px] text-black/80 leading-relaxed font-sans">{key.desc}</p>
@@ -217,13 +216,15 @@ const WhoWeAre = () => {
               ))}
             </div>
           </div>
-          <div className="w-full relative bg-gray-900 min-h-[400px] py-20 px-4 flex items-center">
-            <video autoPlay loop muted playsInline poster="/earth.png" src="/assets/earth.mp4" className="absolute inset-0 w-full h-full object-cover object-center" />
-            <div className="relative z-10 w-full max-w-2xl mx-auto">
-              <p className="text-[24px] leading-tight font-light text-white bg-black/40 backdrop-blur-sm p-6 rounded-lg tracking-wide">
-                Empowering the Defense and Aerospace industry with home-grown <strong className="font-bold text-white">Deep-Tech solutions</strong> that ensure <strong className="font-bold text-white">mission outcomes</strong> across every domain <strong className="font-bold text-white">of modern warfare.</strong>
-              </p>
-            </div>
+        </div>
+
+        {/* Earth Video Section - Mobile */}
+        <div className="md:hidden w-full relative bg-gray-900 h-[80vh] flex items-center">
+          <video autoPlay loop muted playsInline poster="/earth.png" src="/assets/earth.mp4" className="absolute inset-0 w-full h-full object-cover object-center" />
+          <div className="relative z-10 w-full max-w-2xl mx-auto px-4">
+            <p className="text-[24px] leading-tight font-light text-white bg-black/40  p-6 rounded-lg tracking-wide">
+              Empowering the Defense and Aerospace industry with home-grown <strong className="font-bold text-white">Deep-Tech solutions</strong> that ensure <strong className="font-bold text-white">mission outcomes</strong> across every domain <strong className="font-bold text-white">of modern warfare.</strong>
+            </p>
           </div>
         </div>
       </section>

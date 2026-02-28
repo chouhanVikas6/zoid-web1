@@ -107,7 +107,7 @@ export default function ArticleCarousel() {
 
     return (
         <section className="w-full bg-white text-black pb-20 pt-8 overflow-hidden">
-            <div className="max-w-[1600px] mx-auto px-4 md:px-8">
+            <div className="max-w-[1600px] mx-auto">
 
                 {/* Tabs */}
                 <div className="flex overflow-x-auto scrollbar-hide mb-8 gap-2 md:gap-3">
@@ -136,7 +136,7 @@ export default function ArticleCarousel() {
                 `}} />
                 <div
                     ref={containerRef}
-                    className="flex gap-4 w-[100vw] xl:w-full h-[400px] md:h-[600px] overflow-x-auto snap-x snap-mandatory hide-scroll scrollbar-hide -ml-4 md:-ml-8 px-4 md:px-8"
+                    className="flex gap-4 w-[100vw] xl:w-full h-[400px] md:h-[600px] overflow-x-auto snap-x snap-mandatory hide-scroll scrollbar-hide  px-4 md:px-12"
                     style={{ scrollBehavior: 'smooth' }}
                 >
                     {slides.map((slide, idx) => {
@@ -147,7 +147,7 @@ export default function ArticleCarousel() {
                                 key={slide.id}
                                 ref={(el) => { cardRefs.current[idx] = el; }}
                                 // Cards maintain original size, matching large width seen in screenshots
-                                className={`snap-start shrink-0 w-[90vw] md:w-[85vw] lg:w-[1300px] h-full relative group overflow-hidden rounded-xl bg-zinc-900 border border-zinc-500 cursor-pointer transition-opacity duration-300 ${!isActive ? 'opacity-80 hover:opacity-100' : 'opacity-90 opacity-100'}`}
+                                className={`snap-start shrink-0 w-[90vw] md:w-[85vw] lg:w-[1300px] h-full relative group overflow-hidden rounded-xl bg-zinc-900 border border-zinc-500 cursor-pointer transition-opacity duration-300 opacity-100 hover:opacity-70`}
                                 onClick={() => handleTabClick(slide.id)}
                             >
                                 {isActive ? (
@@ -156,14 +156,14 @@ export default function ArticleCarousel() {
                                         loop
                                         muted
                                         playsInline
-                                        className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-700"
+                                        className="absolute inset-0 w-full h-full object-cover opacity-100 group-hover:opacity-70 transition-opacity duration-700"
                                         src={slide.videoSrc}
                                     />
                                 ) : (
                                     <img src={slide.bgImg} alt={slide.title} className="absolute inset-0 w-full h-full object-cover opacity-50 block sm:hidden md:block" /> // Using fallback image for inactive
                                 )}
 
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
 
                                 <div className="absolute bottom-0 left-0 p-6 md:p-10 lg:p-16 flex flex-col justify-end w-full whitespace-normal z-20">
                                     <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] text-shadow-lg font-bold text-white tracking-[0.3em] uppercase leading-tight mb-4 md:mb-6 transition-transform duration-500">

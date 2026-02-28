@@ -10,11 +10,11 @@ const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const navLinks = [
-    { label: "Systems & Solutions", path: "#" },
+    // { label: "Systems & Solutions", path: "#" },
     { label: "Who We Are", path: "/who-we-are" },
-    { label: "What We Do", path: "#" },
-    { label: "Careers", path: "/careers" },
-    { label: "Contact Us", path: "#" },
+    { label: "What We Do", path: "/who-we-are" },
+    // { label: "Careers", path: "/careers" },
+    { label: "Contact Us", path: "/who-we-are" },
   ];
 
   useEffect(() => {
@@ -31,7 +31,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-[72px]">
           <Link href="/" className="flex items-center gap-2 group">
             <img src="/zoid-logo.png" alt="Zoid Logo" className="h-8 md:h-10 w-auto object-contain" />
-            <span className="text-white font-bold text-3xl tracking-wide uppercase">
+            <span className="text-white font-bold text-3xl tracking-wide uppercase" style={{ fontFamily: "'Times New Roman', Times, serif" }}>
               ZOID
             </span>
           </Link>
@@ -90,8 +90,8 @@ const Header = () => {
                 {link.label}
               </Link>
             ))}
-            <div className="h-px bg-white/10 my-2" />
-            <div className="flex items-center justify-between py-2">
+            {/* <div className="h-px bg-white/10 my-2" /> */}
+            {/* <div className="flex items-center justify-between py-2">
               <button className="flex items-center gap-2 text-white hover:text-white/70">
                 <Accessibility className="w-5 h-5" />
                 <span className="text-sm">Accessibility</span>
@@ -105,7 +105,7 @@ const Header = () => {
                   <Search className="w-5 h-5" />
                 </button>
               </div>
-            </div>
+            </div> */}
           </nav>
         </div>
       </div>

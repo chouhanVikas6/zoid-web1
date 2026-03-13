@@ -43,7 +43,7 @@ const systemsData = [
 
 export default function SystemsAndSolutions() {
     return (
-        <section className="bg-black text-white py-24 px-4 md:px-8 w-full border-t border-white/10 relative overflow-hidden">
+        <section id="systems-solutions" className="bg-black text-white py-24 px-4 md:px-8 w-full border-t border-white/10 relative overflow-hidden">
             {/* Background ambient light */}
             <div className="absolute top-0 left-1/4 w-96 h-96 bg-white/5 rounded-full blur-[120px] pointer-events-none" />
 

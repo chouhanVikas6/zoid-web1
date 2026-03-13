@@ -10,7 +10,7 @@ const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const navLinks = [
-    { label: "Systems & Solutions", path: "#" },
+    { label: "Systems & Solutions", path: "/#systems-solutions" },
     { label: "Who We Are", path: "/who-we-are" },
     { label: "What We Do", path: "/who-we-are" },
     // { label: "Careers", path: "/careers" },
@@ -36,15 +36,29 @@ const Header = () => {
 
           {/* Desktop Nav */}
           <nav className="hidden xl:flex items-center gap-7">
-            {navLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.path}
-                className="text-lg text-white hover:text-white/70 transition-colors whitespace-nowrap"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isAnchor = link.path.startsWith('/#') || link.path.startsWith('#');
+              return (
+                <Link
+                  key={link.label}
+                  href={link.path}
+                  onClick={(e) => {
+                    if (isAnchor && pathname === "/") {
+                      const id = link.path.split("#")[1];
+                      const element = document.getElementById(id);
+                      if (element) {
+                        e.preventDefault();
+                        element.scrollIntoView({ behavior: "smooth" });
+                        window.history.pushState(null, "", link.path);
+                      }
+                    }
+                  }}
+                  className="text-lg text-white hover:text-white/70 transition-colors whitespace-nowrap"
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </nav>
 
           {/* Right Action Section */}
@@ -83,11 +97,30 @@ const Header = () => {
         {/* Mobile Nav */}
         <div className={`xl:hidden overflow-hidden transition-all duration-300 ${mobileOpen ? "max-h-96 opacity-100 pb-4" : "max-h-0 opacity-0"}`}>
           <nav className="flex flex-col gap-2 bg-[#333333] p-4 rounded-b-lg border border-white/10 mt-2">
-            {navLinks.map((link) => (
-              <Link key={link.label} href={link.path} onClick={() => setMobileOpen(false)} className="block py-2 text-sm text-white hover:text-white/70">
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isAnchor = link.path.startsWith('/#') || link.path.startsWith('#');
+              return (
+                <Link
+                  key={link.label}
+                  href={link.path}
+                  onClick={(e) => {
+                    if (isAnchor && pathname === "/") {
+                      const id = link.path.split("#")[1];
+                      const element = document.getElementById(id);
+                      if (element) {
+                        e.preventDefault();
+                        element.scrollIntoView({ behavior: "smooth" });
+                        window.history.pushState(null, "", link.path);
+                      }
+                    }
+                    setMobileOpen(false);
+                  }}
+                  className="block py-2 text-sm text-white hover:text-white/70"
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
             {/* <div className="h-px bg-white/10 my-2" /> */}
             {/* <div className="flex items-center justify-between py-2">
               <button className="flex items-center gap-2 text-white hover:text-white/70">

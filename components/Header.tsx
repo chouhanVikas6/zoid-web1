@@ -10,7 +10,7 @@ const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const navLinks = [
-    // { label: "Systems & Solutions", path: "#" },
+    { label: "Systems & Solutions", path: "#" },
     { label: "Who We Are", path: "/who-we-are" },
     { label: "What We Do", path: "/who-we-are" },
     // { label: "Careers", path: "/careers" },
@@ -31,9 +31,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-[72px]">
           <Link href="/" className="flex items-center gap-2 group">
             <img src="/zoid-logo.png" alt="Zoid Logo" className="h-8 md:h-10 w-auto object-contain" />
-            <span className="text-white font-bold text-3xl tracking-wide uppercase" style={{ fontFamily: "'Times New Roman', Times, serif" }}>
-              ZOID
-            </span>
+            <img src="/zoid-logo.svg" alt="Zoid Text Logo" className="h-8 md:h-10 w-auto object-contain mt-2" />
           </Link>
 
           {/* Desktop Nav */}

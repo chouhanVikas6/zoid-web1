@@ -3,6 +3,7 @@ import { ChevronRight } from "lucide-react";
 import ArticleCarousel from "../components/ArticleCarousel";
 import TextFlipper from "../components/TextFlipper";
 import TypewriterText from "../components/TypewriterText";
+import SystemsAndSolutions from "../components/SystemsAndSolutions";
 
 export default function Home() {
   return (
@@ -45,12 +46,12 @@ export default function Home() {
       {/* New Deep-Tech Solutions Section */}
       <section className="bg-black text-white pt-16 md:pt-24 pb-20 md:pb-24 px-4 w-full z-20 relative">
         <div className="max-w-[1400px] mx-auto px-4 md:px-8">
-          <h2 className="text-3xl sm:text-4xl md:text-[2.5rem] lg:text-[3rem] font-bold tracking-[0.05em] uppercase mb-10 md:mb-14 text-white">
+          <h2 className="text-3xl sm:text-4xl md:text-[2.5rem] lg:text-[2.6rem] xl:text-[3rem] xl:whitespace-nowrap font-bold tracking-[0.05em] uppercase mb-10 md:mb-14 text-white">
             We Design, Develop & Deploy Deep-Tech Solutions.
           </h2>
 
           <div className="text-sm md:text-base lg:text-[1.1rem] leading-[2] md:leading-[2.2] text-white/80 font-medium mb-16 md:mb-24 max-w-[1300px]">
-            We have domain expertise in Artificial Intelligence, Robotics-Unmanned Systems, and Electronic Warfare. We use our significant portfolio of IPs to design solutions for the Global Defence and Aerospace Industry. &nbsp;&nbsp; We work shoulder-to-shoulder with the end-user and military personnel to deliver systems that are shaped by real-world missions and insight learned from modern conflicts. This connection with the Concept of Operations drives our R&D process, allowing us to think beyond theoretical requirements and deliver mission success.
+            We Design, Develop, & Deploy Deep-Tech solutions for military applications; with domain expertise in Electronic Warfare and AI-Enabled Software Solutions for unmanned systems.  We have a practical understanding of the technologies used in modern conflicts and hence, our solutions meet not only the end-user’s SQRs but also their operational needs. By integrating best-in-class technologies from our global network into our sovereign systems architecture, we solve complex battlefield problems and deliver solutions that operators can trust.
           </div>
 
           <div className="w-full flex justify-center">
@@ -65,6 +66,7 @@ export default function Home() {
         </div>
       </section>
 
+
       {/* Statement Block */}
       <section className="bg-white text-black pt-20 pb-12 shadow-sm border-t border-gray-200">
         <div className="max-w-[1600px] mx-auto ">
@@ -78,6 +80,10 @@ export default function Home() {
 
       {/* Article Carousel */}
       <ArticleCarousel />
+
+
+      {/* Systems & Solutions Section */}
+      <SystemsAndSolutions />
 
       {/* Second Video Hero (Careers) */}
       <section className="relative h-screen min-h-[600px] w-full flex flex-col justify-end overflow-hidden">

@@ -19,6 +19,14 @@ export default function ArticleCarousel() {
         },
         {
             id: 2,
+            title: "GNSS Denied Navigation",
+            category: "Mission Solutions",
+            videoSrc: "/assets/GNSS.webm",
+            bgImg: "/GNSS.png",
+            description: "We develop Stable Positioning, Navigation & Timing systems for UAVs, Guided Munitions, Manned Aircrafts, & Armored Land Vehicles operating in contested GNSS Electronic Warfare environments. Our solutions are engineered to maintain stable navigation and control under active jamming and spoofing conditions. By integrating anti-jamming Controlled Reception Pattern Antennas (CRPA) with AI-powered Visual–Inertial Odometry (VIO), we deliver robust navigation performance. The architecture enables sustained mission continuity and precise guidance across modern operational corridors.",
+        },
+        {
+            id: 3,
             title: "AI powered Air-Field Monitoring",
             category: "AI and Autonomous Systems",
             videoSrc: "/assets/Air-Field-Monitoring.webm",
@@ -26,20 +34,12 @@ export default function ArticleCarousel() {
             description: "We deploy advanced airfield security and aircraft monitoring systems purpose-built for defence applications. Our custom solutions include FOD detection systems capable of identifying objects as small as 3 mm, and autonomous aircraft monitoring systems that enable real-time coordination and post-mission or crash analysis. Engineered for high reliability and operational continuity, our systems enhance airbase safety, situational awareness, and command-level decision support in demanding aviation environments.",
         },
         {
-            id: 3,
+            id: 4,
             title: "Unmanned Autonomous Systems",
             category: "Aircraft",
             videoSrc: "/assets/Unmanned-Autonomous-Systems.webm",
             bgImg: "/Unmanned-Autonomous-Systems.png",
             description: "We develop advanced unmanned autonomous solutions for defence, spanning multi-rotor UAVs, fixed-wing platforms, and transonic ballistic missile systems, each custom-designed for mission-specific requirements. Our expertise covers swarming autonomy, edge computing, AI-enabled aerial perception, kinetic strike capabilities, and GNSS-denied navigation and control. From low-level firmware customization to high-level multi-platform mission autonomy, we build AI-driven software that enables coordinated operations in complex and contested environments. Our solutions are engineered to deliver success and mission excellence in the most challenging environments.",
-        },
-        {
-            id: 4,
-            title: "GNSS Denied Navigation",
-            category: "Mission Solutions",
-            videoSrc: "/assets/GNSS.webm",
-            bgImg: "/GNSS.png",
-            description: "We develop Stable Positioning, Navigation & Timing systems for UAVs, Guided Munitions, Manned Aircrafts, & Armored Land Vehicles operating in contested GNSS Electronic Warfare environments. Our solutions are engineered to maintain stable navigation and control under active jamming and spoofing conditions. By integrating anti-jamming Controlled Reception Pattern Antennas (CRPA) with AI-powered Visual–Inertial Odometry (VIO), we deliver robust navigation performance. The architecture enables sustained mission continuity and precise guidance across modern operational corridors.",
         },
         // {
         //     id: 5,
@@ -147,7 +147,7 @@ export default function ArticleCarousel() {
                                 key={slide.id}
                                 ref={(el) => { cardRefs.current[idx] = el; }}
                                 // Cards maintain original size, matching large width seen in screenshots
-                                className={`snap-start shrink-0 w-[90vw] md:w-[85vw] lg:w-[1300px] h-full relative group overflow-hidden rounded-xl bg-zinc-900 border border-zinc-500 cursor-pointer transition-opacity duration-300 opacity-100 hover:opacity-70`}
+                                className={`snap-start shrink-0 w-[90vw] md:w-[85vw] lg:w-[1300px] h-full relative group overflow-hidden rounded-xl bg-zinc-900 border border-zinc-500 cursor-pointer transition-all duration-300`}
                                 onClick={() => handleTabClick(slide.id)}
                             >
                                 {isActive ? (
@@ -156,14 +156,15 @@ export default function ArticleCarousel() {
                                         loop
                                         muted
                                         playsInline
-                                        className="absolute inset-0 w-full h-full object-cover opacity-100 group-hover:opacity-70 transition-opacity duration-700"
+                                        className="absolute inset-0 w-full h-full object-cover"
                                         src={slide.videoSrc}
                                     />
                                 ) : (
                                     <img src={slide.bgImg} alt={slide.title} className="absolute inset-0 w-full h-full object-cover opacity-50 block sm:hidden md:block" /> // Using fallback image for inactive
                                 )}
 
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                                <div className="absolute inset-0 bg-transparent group-hover:bg-black/70 transition-colors duration-500 z-10" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10" />
 
                                 <div className="absolute bottom-0 left-0 p-6 md:p-10 lg:p-16 flex flex-col justify-end w-full whitespace-normal z-20">
                                     <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] text-shadow-lg font-bold text-white tracking-[0.3em] uppercase leading-tight mb-4 md:mb-6 transition-transform duration-500">
@@ -179,7 +180,7 @@ export default function ArticleCarousel() {
                                     </div>
 
                                     <div className={`transition-opacity duration-300 ${isActive ? 'opacity-100' : 'opacity-0'}`}>
-                                        <button className="inline-flex items-center justify-between gap-6 bg-white/20 hover:bg-white/30 border border-white/30 backdrop-blur-md px-6 py-2 md:py-3 transition-colors rounded w-fit group-hover:bg-white/30 text-left">
+                                        <button className="inline-flex items-center justify-between gap-6 bg-black/40 hover:bg-black/60 border border-white/30 backdrop-blur-md px-6 py-2 md:py-3 transition-colors rounded w-fit text-left">
                                             <span className="text-[9px] sm:text-[10px] font-bold text-white tracking-[0.2em] uppercase">Find Out More</span>
                                             <ChevronRight className="w-4 h-4 text-white" />
                                         </button>

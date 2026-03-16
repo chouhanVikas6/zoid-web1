@@ -7,7 +7,7 @@ const systemsData = [
         name: "Missile Decoys",
         desc: "Reusable-off board missile decoy",
         image: "/missile-decoy.png",
-        url: "/assets/romd.pdf"
+        url: "#"
     },
     {
         name: "Anti-Jam Anti-Spoof CRPA GNSS",

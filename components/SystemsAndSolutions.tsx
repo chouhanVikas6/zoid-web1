@@ -13,7 +13,7 @@ const systemsData = [
         name: "Anti-Jam Anti-Spoof CRPA GNSS",
         desc: "Anti-Jam Anti-Spoof CRPA GNSS",
         image: "/crpa.svg",
-        url: "/assets/crpa.pdf"
+        url: "/crpa"
     },
     {
         name: "Aerial Intelligance Mapping Suit",

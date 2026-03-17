@@ -67,13 +67,13 @@ export default function RomdPage() {
                 <p>Contact ZOID TECHNOLOGIES for more information: sales@zoidtech.co.in | +91 8800712060 | +91 9871617142 | www.zoidtech.co.in</p>
             </article>
 
-            <Image className="w-full h-auto" src="/romd/first.jpg" alt="ROMD Cover - Zoid Technologies" width={1920} height={1080} quality={100} />
-            <Image className="w-full h-auto" src="/romd/second.jpg" alt="ROMD Key Features" width={1920} height={1080} quality={100} />
-            <Image className="w-full h-auto" src="/romd/third.jpg" alt="ROMD Concept of Operations" width={1920} height={1080} quality={100} />
-            <Image className="w-full h-auto" src="/romd/fourth.jpg" alt="ROMD Carrier Tethered UAV Specifications" width={1920} height={1080} quality={100} />
-            <Image className="w-full h-auto" src="/romd/fifth.jpg" alt="Missile Decoy Active Radar Decoy Payload" width={1920} height={1080} quality={100} />
-            <Image className="w-full h-auto" src="/romd/sixth.jpg" alt="Zoid Technologies Contact Info" width={1920} height={1080} quality={100} />
-            {/* <Image className="w-full h-auto" src="/romd/seventh.jpg" alt="ROMD Details" width={1920} height={1080} quality={100} /> */}
+            <Image className="w-full h-auto" src="/romd/first.jpg" alt="ROMD Cover - Zoid Technologies" width={1920} height={1080} />
+            <Image className="w-full h-auto" src="/romd/second.jpg" alt="ROMD Key Features" width={1920} height={1080} />
+            <Image className="w-full h-auto" src="/romd/third.jpg" alt="ROMD Concept of Operations" width={1920} height={1080} />
+            <Image className="w-full h-auto" src="/romd/fourth.jpg" alt="ROMD Carrier Tethered UAV Specifications" width={1920} height={1080} />
+            <Image className="w-full h-auto" src="/romd/fifth.jpg" alt="Missile Decoy Active Radar Decoy Payload" width={1920} height={1080} />
+            <Image className="w-full h-auto" src="/romd/sixth.jpg" alt="Zoid Technologies Contact Info" width={1920} height={1080} />
+            {/* <Image className="w-full h-auto" src="/romd/seventh.jpg" alt="ROMD Details" width={1920} height={1080} /> */}
 
             <Link
                 href="/assets/romd.pdf"

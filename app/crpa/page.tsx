@@ -63,12 +63,12 @@ export default function CrpaPage() {
                 <p>Contact ZOID TECHNOLOGIES for more information: sales@zoidtech.co.in | +91 8800712060 | +91 9871617142 | www.zoidtech.co.in</p>
             </article>
 
-            <Image className="w-full h-auto" src="/crpa/crpa_page-0001.jpg" alt="NavRakshak CRPA Cover - Zoid Technologies" width={1920} height={1080} quality={100} />
-            <Image className="w-full h-auto" src="/crpa/crpa_page-0002.jpg" alt="NavRakshak CRPA Key Features and Benefits" width={1920} height={1080} quality={100} />
-            <Image className="w-full h-auto" src="/crpa/crpa_page-0003.jpg" alt="NavRakshak CRPA Versions and Technical Specifications" width={1920} height={1080} quality={100} />
-            <Image className="w-full h-auto" src="/crpa/crpa_page-0004.jpg" alt="CRPA Battle Tested Solution and Safe Standoff Distances" width={1920} height={1080} quality={100} />
-            <Image className="w-full h-auto" src="/crpa/crpa_page-0005.jpg" alt="NavRakshak GNSS Receiver Integration and Metrics" width={1920} height={1080} quality={100} />
-            <Image className="w-full h-auto" src="/crpa/crpa_page-0006.jpg" alt="Zoid Technologies Contact Information" width={1920} height={1080} quality={100} />
+            <Image className="w-full h-auto" src="/crpa/crpa_page-0001.jpg" alt="NavRakshak CRPA Cover - Zoid Technologies" width={1920} height={1080} />
+            <Image className="w-full h-auto" src="/crpa/crpa_page-0002.jpg" alt="NavRakshak CRPA Key Features and Benefits" width={1920} height={1080} />
+            <Image className="w-full h-auto" src="/crpa/crpa_page-0003.jpg" alt="NavRakshak CRPA Versions and Technical Specifications" width={1920} height={1080} />
+            <Image className="w-full h-auto" src="/crpa/crpa_page-0004.jpg" alt="CRPA Battle Tested Solution and Safe Standoff Distances" width={1920} height={1080} />
+            <Image className="w-full h-auto" src="/crpa/crpa_page-0005.jpg" alt="NavRakshak GNSS Receiver Integration and Metrics" width={1920} height={1080} />
+            <Image className="w-full h-auto" src="/crpa/crpa_page-0006.jpg" alt="Zoid Technologies Contact Information" width={1920} height={1080} />
 
             <Link
                 href="/assets/crpa.pdf"

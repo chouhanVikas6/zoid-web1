@@ -56,6 +56,9 @@ const Footer = () => {
             <div className="mb-12 md:mb-0">
               <h4 className="text-white font-medium text-xl mb-3 md:mb-5 tracking-wide">Contact</h4>
               <div className="flex items-center gap-2 text-white/80 text-xl md:text-xs leading-relaxed">
+                <LuSmartphone /> <a href="tel:+918800712060">+91 8800712060</a>
+              </div>
+              <div className="flex items-center gap-2 text-white/80 text-xl md:text-xs leading-relaxed">
                 <LuSmartphone /> <a href="tel:+919871617142">+91 9871617142</a>
               </div>
               <div className="flex items-center gap-2 text-white/80 text-xl md:text-xs leading-relaxed">

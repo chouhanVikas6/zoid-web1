@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Search, Menu, X, Accessibility, MessageSquare } from "lucide-react";
 import React, { useState, useEffect } from "react";
+import { event } from "@/lib/gtag";
 
 const Header = () => {
   const pathname = usePathname();
@@ -43,6 +44,11 @@ const Header = () => {
                   key={link.label}
                   href={link.path}
                   onClick={(e) => {
+                    event({
+                      action: "nav_click",
+                      category: "Navigation",
+                      label: link.label,
+                    });
                     if (isAnchor && pathname === "/") {
                       const id = link.path.split("#")[1];
                       const element = document.getElementById(id);
@@ -104,6 +110,11 @@ const Header = () => {
                   key={link.label}
                   href={link.path}
                   onClick={(e) => {
+                    event({
+                      action: "nav_click_mobile",
+                      category: "Navigation",
+                      label: link.label,
+                    });
                     if (isAnchor && pathname === "/") {
                       const id = link.path.split("#")[1];
                       const element = document.getElementById(id);

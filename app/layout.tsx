@@ -29,7 +29,7 @@ export default function RootLayout({
         {/* Google tag (gtag.js) */}
         <Script
           strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=G-JL3YSXCTQQ`}
+          src={`https://www.googletagmanager.com/gtag/js?id=G-H8MFX547EW`}
         />
         <Script
           id="gtag-init"
@@ -39,7 +39,7 @@ export default function RootLayout({
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-JL3YSXCTQQ', {
+              gtag('config', 'G-H8MFX547EW', {
                 page_path: window.location.pathname,
               });
             `,

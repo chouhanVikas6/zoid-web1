@@ -3,6 +3,7 @@ import { leaders } from "@/lib/leaders";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import LeaderPageTracker from "@/components/LeaderPageTracker";
+import PrintButton from "@/components/PrintButton";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -27,17 +28,27 @@ export default async function LeaderPage({ params }: PageProps) {
   }
 
   return (
-    <div className="bg-white min-h-screen font-sans">
+    <div className="bg-white font-sans overflow-visible pb-12">
       <LeaderPageTracker leaderName={leader.name} />
+      
+      {/* Print-only Header */}
+      <div className="hidden print:flex items-center justify-between border-b-2 border-black pb-8 mb-8 pt-0">
+        <img src="/zoid-logo.png" alt="Zoid Logo" className="h-10 w-auto" />
+        <div className="text-right">
+          <p className="font-bold text-xl uppercase tracking-widest text-black">Zoid Technologies</p>
+          <p className="text-sm text-black/60">Corporate Leadership Profile</p>
+        </div>
+      </div>
+
       {/* Page Title */}
-      <div className="py-12 pt-24 bg-black">
+      <div className="py-12 pt-24 bg-black print:hidden">
         <h1 className="text-4xl md:text-5xl font-bold text-center text-white">
           Corporate Leadership
         </h1>
       </div>
 
       {/* Breadcrumb */}
-      <div className="bg-[#0a0a0a] py-4">
+      <div className="bg-[#0a0a0a] py-4 print:hidden">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <nav className="text-sm flex items-center space-x-2 text-white/80">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
@@ -68,13 +79,7 @@ export default async function LeaderPage({ params }: PageProps) {
                 {leader.desc}
               </div>
 
-              <Link
-                href="#"
-                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-bold transition-colors group"
-              >
-                Printer-Friendly Version [PDF]
-                <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
-              </Link>
+              <PrintButton />
             </div>
 
             <div className="w-full md:w-[40%] order-1 md:order-2">
@@ -100,14 +105,9 @@ export default async function LeaderPage({ params }: PageProps) {
                 {para}
               </p>
             )) || (
-                <>
-                  <p className="text-lg md:text-xl font-light leading-relaxed opacity-90">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </p>
-                  <p className="text-lg md:text-xl font-light leading-relaxed opacity-90">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>
-                </>
+                <p className="text-lg md:text-xl font-light leading-relaxed opacity-90">
+                  {leader.desc}
+                </p>
               )}
           </div>
         </div>

@@ -149,3 +149,49 @@
     --ring: 213 27% 84%;
   }
 }
+
+@media print {
+  @page {
+    margin: 1cm;
+    size: auto;
+  }
+  html, body {
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+  header, footer, nav, .no-print, [aria-hidden="true"], script {
+    display: none !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  section {
+    padding: 0 !important;
+    margin-bottom: 2rem !important;
+    page-break-inside: auto;
+    break-inside: auto;
+  }
+  .bg-black, .bg-\[\#0a0a0a\], .bg-\[\#111111\], .bg-white {
+    background: transparent !important;
+    color: black !important;
+    border: none !important;
+  }
+  div, p, span, h1, h2, h3 {
+    color: black !important;
+  }
+  .min-h-screen, .h-screen {
+    min-height: 0 !important;
+    height: auto !important;
+  }
+  main {
+    display: block !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}

@@ -15,7 +15,7 @@ const Header = () => {
     { label: "Who We Are", path: "/who-we-are" },
     { label: "What We Do", path: "/who-we-are" },
     // { label: "Careers", path: "/careers" },
-    { label: "Contact Us", path: "/who-we-are" },
+    { label: "Contact Us", path: "/contact" },
   ];
 
   useEffect(() => {

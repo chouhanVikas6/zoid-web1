@@ -8,13 +8,13 @@ import { LuLinkedin } from "react-icons/lu";
 
 const Footer = () => {
   return (
-    <footer className="relative w-full bg-[#050505] text-white pt-16 pb-8 px-6 md:px-12 xl:px-24 font-sans overflow-hidden border-t border-white/10 min-h-[600px] flex flex-col justify-between">
+    <footer className="relative w-full bg-[#050505] text-white pt-16 pb-8 px-6 md:px-12 xl:px-24 font-sans overflow-hidden border-t border-white/10 min-h-screen flex flex-col justify-between">
       {/* Background SVG Overlay */}
       <div className="absolute inset-0 z-0 opacity-70 pointer-events-none min-w-[1400px]">
         <img
           src="/jetsketch.svg"
           alt="Jet Sketch Background"
-          className="w-full h-full object-cover object-center opacity-80"
+          className="w-full h-full object-cover object-center "
         />
       </div>
 
@@ -47,7 +47,7 @@ const Footer = () => {
             <div className="flex flex-col gap-6 md:mt-24">
               <Link href="/" className="text-white/70 text-xl md:text-xs hover:text-white transition-colors">Home</Link>
               <Link href="/who-we-are" className="text-white/70 text-xl md:text-xs hover:text-white transition-colors">Who we are</Link>
-              <Link href="/who-we-are" className="text-white/70 text-xl md:text-xs hover:text-white transition-colors">Contact Us</Link>
+              <Link href="/contact" className="text-white/70 text-xl md:text-xs hover:text-white transition-colors">Contact Us</Link>
             </div>
           </div>
 
@@ -96,8 +96,8 @@ const Footer = () => {
             </div>
 
             <div className="flex gap-8 text-[9px] md:text-[10px] text-white/70 tracking-[0.05em] font-sans">
-              <Link href="#" className="hover:text-white transition-colors">Terms of Use</Link>
-              <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
+              <Link href="/terms-of-use" className="hover:text-white transition-colors uppercase">Terms of Use</Link>
+              <Link href="/privacy-policy" className="hover:text-white transition-colors uppercase">Privacy Policy</Link>
             </div>
           </div>
         </div>

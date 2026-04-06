@@ -1,40 +1,5 @@
 import Link from "next/link";
-import { ChevronRight } from "lucide-react";
-
-const cardRows = [
-  [
-    { title: "Leadership", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=300&fit=crop", desc: "Meet the leaders guiding our mission." },
-    { title: "Our Values", image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&h=300&fit=crop", desc: "Integrity, quality, and innovation drive everything we do." },
-    { title: "Corporate Responsibility", image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop", desc: "Making a positive impact in our communities." },
-  ],
-  [
-    { title: "News", image: "https://images.unsplash.com/photo-1504711434969-e33886168d6c?w=400&h=300&fit=crop", desc: "Latest updates and announcements." },
-    { title: "Investors", image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&h=300&fit=crop", desc: "Financial information and reports." },
-    { title: "Annual Reports", image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop", desc: "Year-in-review publications." },
-  ],
-  [
-    { title: "Life at ZOID", image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=300&fit=crop", desc: "Culture, benefits, and employee experience." },
-    { title: "Now. Powered by ZOID", image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop", desc: "Innovation stories from our teams." },
-    { title: "Heritage", image: "https://images.unsplash.com/photo-1446776877081-d282a0f896e2?w=400&h=300&fit=crop", desc: "Our legacy of defining possible." },
-  ],
-];
-
-const leaders = [{
-  name: "Aman Virmani",
-  role: "Founder and CEO",
-  image: "/aman-virmani.jpeg",
-  desc: "Aman Virmani is the Founder and the Chief Executive Officer of Zoid Technologies where he drives the vision and strategic roadmap of the Deep-Tech Defense Technology products. He leverages his industry connect, and vast techno-commercial experience to drive the team towards excelence."
-}, {
-  name: "Nilesh Aggarwal",
-  role: "Founder and CTO",
-  image: "/nilesh-aggarwal.jpeg",
-  desc: "Nilesh Aggarwal is the co-founder and the Chief Technology Officer of Zoid Technologies, where he develops and deploys Defence Technology alongside his brilliant team. He understands a wide spectrum of technologies from the various domains of Robotics, Optics, Software, Electronic Warfare, and Artificial Intelligence. He leverages this knowledge with his ability to learn & adapt quickly to execute high-stakes R&D projects even in unfavourable timelines."
-}, {
-  name: "Anunay Varshney",
-  role: "Founder and COO",
-  image: "/anunay.jpeg",
-  desc: "Anunay Varshney is the co-founder and the Chief Operating Officer of Zoid Technologies. He is the head AI Scientist and leverages his deep technical expertise to lead R&D projects in his domain. He is the back-bone of the company and is responsible for core-company functions including manufacturing, communications, business operations, People Management and Talent Acquisition."
-}]
+import { leaders } from "@/lib/leaders";
 
 const WhoWeAre = () => {
   return (
@@ -157,7 +122,7 @@ const WhoWeAre = () => {
       </section>
 
       {/* Our Leadership Section */}
-      <section className="w-full flex justify-center bg-white text-black pt-20 border-t border-gray-100 flex-col items-center">
+      <section id="leadership" className="w-full flex justify-center bg-white text-black pt-20 border-t border-gray-100 flex-col items-center">
         {/* Desktop View */}
         <div className="hidden md:flex flex-col w-full relative">
           <div className="max-w-7xl mx-auto px-4 w-full mb-8">
@@ -167,17 +132,17 @@ const WhoWeAre = () => {
           </div>
           <div className="max-w-7xl mx-auto px-4 w-full pb-20">
             <div className="grid grid-cols-3 gap-6 lg:gap-8">
-              {leaders.map((key) => (
-                <div key={key.name} className="w-full bg-white rounded-md border border-gray-200 shadow-[0_2px_12px_rgba(0,0,0,0.08)] overflow-hidden">
+              {leaders.map((leader) => (
+                <Link key={leader.slug} href={`/who-we-are/company-leadership/${leader.slug}`} className="w-full bg-white rounded-md border border-gray-200 shadow-[0_2px_12px_rgba(0,0,0,0.08)] overflow-hidden group hover:shadow-[0_4px_20px_rgba(0,0,0,0.12)] transition-shadow duration-300">
                   <div className="bg-[#d1d5db] mx-4 mt-4 rounded-sm overflow-hidden">
-                    <img src={key.image} alt={key.name} className="w-full aspect-[4/5] object-cover object-top" />
+                    <img src={leader.image} alt={leader.name} className="w-full aspect-[4/5] object-cover object-top group-hover:scale-105 transition-transform duration-500" />
                   </div>
                   <div className="p-6 md:p-8 border-t border-gray-100 mt-4">
-                    <h3 className="text-xl font-bold text-black mb-1">{key.name}</h3>
-                    <p className="text-sm font-medium text-gray-500">{key.role}</p>
-                    <p className="mt-4 text-[14px] text-black/80 leading-relaxed font-sans">{key.desc}</p>
+                    <h3 className="text-xl font-bold text-black mb-1 group-hover:text-blue-600 transition-colors uppercase">{leader.name}</h3>
+                    <p className="text-sm font-medium text-gray-500">{leader.role}</p>
+                    <p className="mt-4 text-[14px] text-black/80 leading-relaxed font-sans">{leader.desc}</p>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
@@ -202,17 +167,17 @@ const WhoWeAre = () => {
               Our Leadership
             </h2>
             <div className="grid grid-cols-1 gap-8">
-              {leaders.map((key) => (
-                <div key={key.name} className="w-full bg-white rounded-md border border-gray-200 shadow-[0_2px_12px_rgba(0,0,0,0.08)] overflow-hidden">
+              {leaders.map((leader) => (
+                <Link key={leader.slug} href={`/who-we-are/company-leadership/${leader.slug}`} className="w-full bg-white rounded-md border border-gray-200 shadow-[0_2px_12px_rgba(0,0,0,0.08)] overflow-hidden active:bg-gray-50">
                   <div className="bg-[#d1d5db] mx-4 mt-4 rounded-sm overflow-hidden aspect-[4/5]">
-                    <img src={key.image} alt={key.name} className="w-full h-full object-cover object-top" />
+                    <img src={leader.image} alt={leader.name} className="w-full h-full object-cover object-top" />
                   </div>
                   <div className="p-6 border-t border-gray-100 mt-4">
-                    <h3 className="text-xl font-bold text-black mb-1">{key.name}</h3>
-                    <p className="text-sm font-medium text-gray-500">{key.role}</p>
-                    <p className="mt-4 text-[14px] text-black/80 leading-relaxed font-sans">{key.desc}</p>
+                    <h3 className="text-xl font-bold text-black mb-1 uppercase">{leader.name}</h3>
+                    <p className="text-sm font-medium text-gray-500">{leader.role}</p>
+                    <p className="mt-4 text-[14px] text-black/80 leading-relaxed font-sans">{leader.desc}</p>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>

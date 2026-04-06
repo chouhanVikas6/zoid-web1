@@ -30,7 +30,7 @@ const systemsData = [
     {
         name: "Aircraft Tracking and Monitoring System",
         desc: "Aircraft Tracking and Monitoring System",
-        image: "https://www.rafael.co.il/wp-content/uploads/2025/06/IRON_BEAM_450.png",
+        image: "/air-tracking.png",
         url: "#"
     },
     {

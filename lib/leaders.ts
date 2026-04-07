@@ -33,13 +33,13 @@ export const leaders: Leader[] = [
     ]
   },
   {
-    slug: "anunay-varshney",
-    name: "Anunay Varshney",
+    slug: "anunay",
+    name: "Anunay",
     role: "Founder and COO",
     image: "/anunay.jpeg",
-    desc: "Anunay Varshney is the co-founder and the Chief Operating Officer of Zoid Technologies. He is the head AI Scientist and leverages his deep technical expertise to lead R&D projects in his domain. He is the back-bone of the company and is responsible for core-company functions including manufacturing, communications, business operations, People Management and Talent Acquisition.",
+    desc: "Anunay is the co-founder and the Chief Operating Officer of Zoid Technologies. He is the head AI Scientist and leverages his deep technical expertise to lead R&D projects in his domain. He is the back-bone of the company and is responsible for core-company functions including manufacturing, communications, business operations, People Management and Talent Acquisition.",
     bio: [
-      "Anunay Varshney is the co-founder and the Chief Operating Officer of Zoid Technologies. He is the head AI Scientist and leverages his deep technical expertise to lead R&D projects in his domain.",
+      "Anunay is the co-founder and the Chief Operating Officer of Zoid Technologies. He is the head AI Scientist and leverages his deep technical expertise to lead R&D projects in his domain.",
       "Prior to ZOID, His deep interest in AI and Robotics was driven by his time as the Software Head of UAS-DTU. Under his leadership were a group 20+ young researchers who worked upon the toughest research problems in Aerial Robotics, Navigation, Electronics and Artificial Intelligence. His R&D projects in AI are vast and wide, anywhere from Human Action Recognition systems for disaster management to Drone based visual targetting systems for Simulator Development Division, Indian Army. His AI systems are deployed in real-life, on low SWAP hardware in harsh operating conditions.",
       "He is the back-bone of the company and is responsible for core-company functions including manufacturing, communications, business operations, People Management and Talent Acquisition. His multi-faceted role ensures the smooth functioning of Zoid, from technical R&D to essential business operations.",
       "Anunay's leadership in AI and company operations has been a cornerstone of Zoid's growth and stability."

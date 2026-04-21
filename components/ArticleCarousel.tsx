@@ -19,6 +19,14 @@ export default function ArticleCarousel() {
         },
         {
             id: 2,
+            title: "Electronic Warfare",
+            category: "Mission Solutions",
+            videoSrc: "/assets/shipWithFlag.mp4",
+            bgImg: "/assets/shipWithFlag.png",
+            description: "We develop Stable Positioning, Navigation & Timing systems for UAVs, Guided Munitions, Manned Aircrafts, & Armored Land Vehicles operating in contested GNSS Electronic Warfare environments. Our solutions are engineered to maintain stable navigation and control under active jamming and spoofing conditions. By integrating anti-jamming Controlled Reception Pattern Antennas (CRPA) with AI-powered Visual–Inertial Odometry (VIO), we deliver robust navigation performance. The architecture enables sustained mission continuity and precise guidance across modern operational corridors.",
+        },
+        {
+            id: 3,
             title: "GNSS Denied Navigation",
             category: "Mission Solutions",
             videoSrc: "/assets/GNSS.webm",
@@ -26,7 +34,7 @@ export default function ArticleCarousel() {
             description: "We develop Stable Positioning, Navigation & Timing systems for UAVs, Guided Munitions, Manned Aircrafts, & Armored Land Vehicles operating in contested GNSS Electronic Warfare environments. Our solutions are engineered to maintain stable navigation and control under active jamming and spoofing conditions. By integrating anti-jamming Controlled Reception Pattern Antennas (CRPA) with AI-powered Visual–Inertial Odometry (VIO), we deliver robust navigation performance. The architecture enables sustained mission continuity and precise guidance across modern operational corridors.",
         },
         {
-            id: 3,
+            id: 4,
             title: "AI powered Air-Field Monitoring",
             category: "AI and Autonomous Systems",
             videoSrc: "/assets/Air-Field-Monitoring.webm",
@@ -34,21 +42,13 @@ export default function ArticleCarousel() {
             description: "We deploy advanced airfield security and aircraft monitoring systems purpose-built for defence applications. Our custom solutions include FOD detection systems capable of identifying objects as small as 3 mm, and autonomous aircraft monitoring systems that enable real-time coordination and post-mission or crash analysis. Engineered for high reliability and operational continuity, our systems enhance airbase safety, situational awareness, and command-level decision support in demanding aviation environments.",
         },
         {
-            id: 4,
+            id: 5,
             title: "Unmanned Autonomous Systems",
             category: "Aircraft",
             videoSrc: "/assets/Unmanned-Autonomous-Systems.webm",
             bgImg: "/Unmanned-Autonomous-Systems.png",
             description: "We develop advanced unmanned autonomous solutions for defence, spanning multi-rotor UAVs, fixed-wing platforms, and transonic ballistic missile systems, each custom-designed for mission-specific requirements. Our expertise covers swarming autonomy, edge computing, AI-enabled aerial perception, kinetic strike capabilities, and GNSS-denied navigation and control. From low-level firmware customization to high-level multi-platform mission autonomy, we build AI-driven software that enables coordinated operations in complex and contested environments. Our solutions are engineered to deliver success and mission excellence in the most challenging environments.",
-        },
-        // {
-        //     id: 5,
-        //     title: "Electronic Warfare",
-        //     category: "Mission Solutions",
-        //     videoSrc: "https://cdn.northropgrumman.com/-/media/Project/Northrop-Grumman/ngc/what-we-do/mission-solutions/fast-tracking-concept-combat-1920x840_V4.mp4",
-        //     bgImg: "https://cdn.northropgrumman.com/-/media/Project/Northrop-Grumman/ngc/what-we-do/mission-solutions/fast-tracking-concept-combat-hero-1920x840.jpg",
-        //     description: "We develop Stable Positioning, Navigation & Timing systems for UAVs, Guided Munitions, Manned Aircrafts, & Armored Land Vehicles operating in contested GNSS Electronic Warfare environments. Our solutions are engineered to maintain stable navigation and control under active jamming and spoofing conditions. By integrating anti-jamming Controlled Reception Pattern Antennas (CRPA) with AI-powered Visual–Inertial Odometry (VIO), we deliver robust navigation performance. The architecture enables sustained mission continuity and precise guidance across modern operational corridors.",
-        // },
+        }
     ];
 
     // Handle Tab Click

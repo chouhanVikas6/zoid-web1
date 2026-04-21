@@ -24,7 +24,7 @@ const systemsData = [
     {
         name: "FOD detection system",
         desc: "AI based Autonomous FOD Detection",
-        image: "/fod.jpeg",
+        image: "/debris.png",
         url: "#"
     },
     {
